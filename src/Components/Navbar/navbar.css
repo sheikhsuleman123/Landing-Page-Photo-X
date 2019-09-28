@@ -1,0 +1,16 @@
+.tc{
+    color: white;
+}
+.nav-menu {
+    background: linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .4));
+    padding: 30px;
+}
+.menu-item{
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #eee;
+    transition: color .5s;
+}
+.menu-item:hover{
+    color: rgb(199, 109, 24);
+}
