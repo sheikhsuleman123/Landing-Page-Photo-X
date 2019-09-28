@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import './header.css';
+
+import Navbar from '../Navbar/Navbar';
+
 export default class componentName extends Component {
   render() {
     return (
     
       <header>
-
-   <div className="text-light text-right">
-    <h1 className="display-4">
+        <Navbar />
+   <div className="text-light text-md-right text-center banner">
+    <h1 className="display-4 banner-heading">
         Welcome to <span >PHOTO </span>  <span className="display-3"> X</span>
     </h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p className="lead para">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
    </div>
       </header>
     );
