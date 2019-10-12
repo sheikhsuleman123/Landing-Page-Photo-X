@@ -9,3 +9,34 @@
 i{
     color: rgb(199, 109, 24);
 }
+
+.fromleft {
+    animation-name: fromleft;
+    animation-duration: 3s;
+}
+.fromright {
+    animation-name: fromright;
+    animation-duration: 3s;
+}
+
+
+@keyframes fromleft {
+    0% {
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fromright {
+    0% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
