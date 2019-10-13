@@ -1,0 +1,8 @@
+.underline {
+    width: 150px;
+    border: 2px solid white;
+    margin: auto;
+}
+.customer {
+    background: #151f20;
+}
