@@ -8,3 +8,6 @@
     cursor: pointer;
     user-select: none;
 }
+.active-item {
+    color: #70aed2;
+}

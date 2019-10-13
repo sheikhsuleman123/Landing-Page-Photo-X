@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './gallery.css';
+import $ from 'jquery';
 
 import img1 from '../../images/img1.jpeg';
 import img2 from '../../images/img2.jpeg';
@@ -18,6 +19,25 @@ import img14 from '../../images/img4.jpeg';
 import img15 from '../../images/img15.jpeg';
 
 export default class Gallery extends Component {
+
+  componentDidMount() {
+    $('.gallery-list-item').click(function() {
+      let value = $(this).attr('data-filter');
+      if(value === 'all') {
+        $('.filter').show(300);
+      } else {
+        $('.filter').not('.' + value).hide(300);
+        $('.filter').filter('.' + value).show(300);
+      }
+    });
+
+    $('.gallery-list-item').click(function() {
+      $(this).addClass('active-item').siblings().removeClass('active-item');
+
+    })
+
+  }
+
   render() {
     return (
       <section className="py-5">
@@ -30,23 +50,23 @@ export default class Gallery extends Component {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor omnis eius tempora vero cumque dolore veniam excepturi doloribus necessitatibus placeat quidem dicta officia, Dolor omnis eius tempora vero cumque dolore veniam excepturi sint quia mollitia id vel corrupti aliquam?</p>            </div>
             </div>
             <ul className="list-inline text-center text-uppercase font-weight-bold my-4">
-                <li className="list-inline-item gallery-list-item" data-filter="all">
-                    All <span className="mx-5 text-muted">/</span>
+                <li className="list-inline-item gallery-list-item active-item" data-filter="all">
+                    All <span className="mx-md-5 mx-3 text-muted">/</span>
                 </li>
                 <li className="list-inline-item gallery-list-item" data-filter="new">
-                    New <span className="mx-5 text-muted">/</span>
+                    New <span className="mx-md-5 mx-3 text-muted">/</span>
                 </li>
                 <li className="list-inline-item gallery-list-item" data-filter="free">
-                    Free <span className="mx-5 text-muted">/</span>
+                    Free <span className="mx-md-5 mx-3 text-muted">/</span>
                 </li>
                 <li className="list-inline-item gallery-list-item" data-filter="pro">Pro
                 </li>
             </ul>
             <div className="container-fluid">
                 <div className="d-flex flex-wrap justify-content-center">
-                    <div className="filter new"><img src={img1} width="300" alt="" /> </div>
-                    <div className="filter free"><img src={img2} width="300" alt="" /> </div>
-                    <div className="filter pro"><img src={img3} width="300" alt="" /> </div>
+                    <div className="filter  new"><img src={img1} width="300" alt="" /> </div>
+                    <div className="filter  free"><img src={img2} width="300" alt="" /> </div>
+                    <div className="filter  pro"><img src={img3} width="300" alt="" /> </div>
                
                     <div className="filter new"><img src={img4} width="300" alt="" /> </div>
                     <div className="filter free"><img src={img5} width="300" alt="" /> </div>
