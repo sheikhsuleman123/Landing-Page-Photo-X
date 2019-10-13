@@ -3,3 +3,8 @@
     border: 2px solid #888;
     margin: auto;
 }
+.gallery-list-item {
+    color: #777;
+    cursor: pointer;
+    user-select: none;
+}
