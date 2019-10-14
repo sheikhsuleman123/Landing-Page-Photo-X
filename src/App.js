@@ -8,6 +8,7 @@ import Collection from './Components/Collection/Collection';
 import Gallery from './Components/Gallery/Gallery';
 import Customer from './Components/Customer/Customer';
 import Pricing from './Components/Pricing/Pricing';
+import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       <Gallery />
       <Customer />
       <Pricing />
-
+      <Contact />
+      
     </div>
   );
 }
