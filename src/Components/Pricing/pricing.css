@@ -1,0 +1,70 @@
+.card-1, .card-2, .card-3 {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0, .4)),url(../../images/pricing-card-bg.jpeg) center no-repeat/cover;
+    box-shadow: 7px 18px 40px #555;
+    max-width: 400px;
+}
+
+.card-list-item {
+    border-bottom: 1px solid #eee;
+    width: 55%;
+    margin: auto;
+}
+.price-card-button {
+    background: #f5593d;
+    width: 130px;
+    border-radius: 25px;
+    box-shadow: 5px 8px 18px #000;
+    transition: all .2s;
+}
+.price-card-button:hover {
+    background: #f5593d;
+    transform: translateY(-2px);
+}
+.movfromleft {
+    animation-name: movfromleft;
+    animation-duration: .2s;
+    /* border: 5px solid red; */
+}
+.movfromright {
+    animation-name: movfromright;
+    animation-duration: .2s;
+}
+.movfrombottom {
+    animation-name: movfrombottom;
+    animation-duration: .2s;
+}
+
+
+@keyframes movfromleft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes movfromright {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes movfrombottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
